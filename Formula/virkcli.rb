@@ -5,13 +5,13 @@
 class Virkcli < Formula
   desc "CLI for querying Danish company data via the official VIRK / CVR API"
   homepage "https://github.com/kaspermunck/virkcli"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kaspermunck/virkcli/releases/download/v0.1.0/virkcli_darwin_amd64.tar.gz"
-      sha256 "d91bb81c0a3d661be6dd2b1da6a5bf33a065231db31719e1ed0051877a8884c7"
+      url "https://github.com/kaspermunck/virkcli/releases/download/v0.2.0/virkcli_darwin_amd64.tar.gz"
+      sha256 "dc1842a58d53bf20edf47a5c2a954df2b4c7293d57de8a483255ddc67c4d3008"
 
       define_method(:install) do
         bin.install "virkcli"
@@ -19,8 +19,8 @@ class Virkcli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kaspermunck/virkcli/releases/download/v0.1.0/virkcli_darwin_arm64.tar.gz"
-      sha256 "e52fc357d1c34f515407d00229e3aa94de6cf49e3fd2d9864e2b063579fe6d5e"
+      url "https://github.com/kaspermunck/virkcli/releases/download/v0.2.0/virkcli_darwin_arm64.tar.gz"
+      sha256 "923b4fe6bb50c078c68d3e5346cbc1e1ea8a1d880bd751bac659f9acb8bfafb1"
 
       define_method(:install) do
         bin.install "virkcli"
@@ -31,16 +31,16 @@ class Virkcli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kaspermunck/virkcli/releases/download/v0.1.0/virkcli_linux_amd64.tar.gz"
-      sha256 "31482b92f5609ecfdb71d475690ee928c3eaeea8786a82a97733c50b1fd14553"
+      url "https://github.com/kaspermunck/virkcli/releases/download/v0.2.0/virkcli_linux_amd64.tar.gz"
+      sha256 "7b03b16c0a0ea834ca08a7bbb83668817a0f228ed69b0d4254620c11735ae0f1"
       define_method(:install) do
         bin.install "virkcli"
         pkgshare.install "skill"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kaspermunck/virkcli/releases/download/v0.1.0/virkcli_linux_arm64.tar.gz"
-      sha256 "b141321b62692e3374854314d5fff7fcaf0295009932f3fbbfe78b1082673e25"
+      url "https://github.com/kaspermunck/virkcli/releases/download/v0.2.0/virkcli_linux_arm64.tar.gz"
+      sha256 "b2eff8243c9077fe9edd92fa25f1cef303b54cae5fe3d76267db6914a8e33e88"
       define_method(:install) do
         bin.install "virkcli"
         pkgshare.install "skill"
